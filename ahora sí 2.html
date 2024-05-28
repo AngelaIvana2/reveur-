@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reveur</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>REVEUR</h1>
+        <p>¡Bienvenido a Reveur! Donde la imaginación cobra vida</p>
+    </header>
+    <section class="menu">
+        <div class="circle" onclick="file:///C:/Users/DELL/3D%20Objects/P%C3%81GINA/pagina%202.html='quienes-somos.html'">
+            <img src="images/gatologo.jpg" alt="¿Quiénes somos?">
+            <span>¿Quiénes somos?</span>
+        </div>
+        <div class="circle" onclick="window.location.href='tutoriales.html'">
+            <img src="images/hola2.png" alt="Tutoriales">
+            <span>Tutoriales</span>
+        </div>
+        <div class="circle" onclick="window.location.href='contacto.html'">
+            <img src="images/hola3.png" alt="Contacto">
+            <span>Contacto</span>
+        </div>
+        <div class="circle" onclick="window.location.href='mas-sobre-animacion.html'">
+            <img src="images/hola.jpeg" alt="Más sobre la animación">
+            <span>Más sobre la animación</span>
+        </div>
+    </section>
+    <section class="carousel">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/carrutonto1.png" alt="Imagen 1"></div>
+                <div class="swiper-slide"><img src="images/carrutonto2.png" alt="Imagen 2"></div>
+                <div class="swiper-slide"><img src="images/carrutonto3.png" alt="Imagen 3"></div>
+                <div class="swiper-slide"><img src="images/carrutonto4.png" alt="Imagen 4"></div>
+                <div class="swiper-slide"><img src="images/carrutonto5.png" alt="Imagen 5"></div>
+                <div class="swiper-slide"><img src="images/carrutonto6.png" alt="Imagen 6"></div>
+                <div class="swiper-slide"><img src="images/carrutonto7.png" alt="Imagen 7"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next custom-button"><span>&rarr;</span></div>
+            <div class="swiper-button-prev custom-button"><span>&larr;</span></div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>
+
+<style>body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: url('images/fondo.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+    background-color: rgb(255, 166, 0);
+    padding: 20px 0;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 4em;
+    color: rgb(107, 5, 5);
+}
+
+header p {
+    font-size: 1.5em;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.circle {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.circle img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle span {
+    margin-top: 10px;
+    font-size: 1em;
+    color: black;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+}
+
+.carousel {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 300px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.custom-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+</style>
